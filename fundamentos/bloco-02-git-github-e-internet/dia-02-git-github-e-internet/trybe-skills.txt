@@ -1,0 +1,7 @@
+Unix
+Bash
+Git
+React
+Vuejs
+NextJs
+NodeJs
