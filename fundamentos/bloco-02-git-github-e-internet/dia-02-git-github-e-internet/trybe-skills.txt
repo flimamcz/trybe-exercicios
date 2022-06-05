@@ -5,6 +5,6 @@ React
 Vuejs
 NextJs
 NodeJs
-React
-VueJs
 TailwindCss
+CSS
+JS
