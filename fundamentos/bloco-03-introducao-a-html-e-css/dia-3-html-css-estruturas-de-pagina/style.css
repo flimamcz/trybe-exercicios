@@ -1,0 +1,28 @@
+div:hover {
+  border: 2px solid #181818;
+}
+
+div:nth-child(3){
+  background: #725b5b;
+}
+
+div:nth-child(4){
+  background: #e63636;
+}
+
+div:nth-child(5){
+  background: #2c2525;
+  padding: 40px;
+}
+
+div:nth-child(6){
+  background: #b31111;
+}
+
+div:nth-child(7){
+  background: #494444;
+}
+
+div:nth-child(odd){
+  color: #fff;
+}
