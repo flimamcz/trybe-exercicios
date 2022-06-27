@@ -74,20 +74,13 @@ let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27, 90];
 // console.log(menor)
 
 //Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado;
-// let array = []
-// for(let count = 1; count < 26; count++){
-//     array.push(count)
-// }
 
-// console.log(array)
+let array = []
+for(let count = 1; count < 26; count++){
+    array.push(count)
+}
 
 // Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2.
-
-
-// let array = []
-
-// for(let count = 1; count < 26; count++){
-//     array.push(count)
-
-//     console.log(array[count] / 2)
-// }
+for(let index = 0; index < array.length; index++){
+    console.log(array[index] / 2)
+}
