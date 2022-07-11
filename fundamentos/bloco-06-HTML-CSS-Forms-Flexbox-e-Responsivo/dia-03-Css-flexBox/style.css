@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu';
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.flex {
+  display: flex;
+}
+
+.header-img {
+  width: 70px;
+}
+
+.gallery-img {
+  width: 150px;
+}
+
+.social-img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+.header {
+  background-color: #323433;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header h1 {
+  color: #f1f1f1;
+}
+
+.header a {
+  font-size: 1.2rem;
+  color: #d6cfcf;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.header a:hover {
+  transform: scale(1.05);
+  transition: .2s;
+}
+
+.paragraph p {
+  font-size: 1.6rem;
+  color: #323433;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.container-gallery {
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 570px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+
+.container-gallery div{
+  width: 180px;
+  border-radius: 0.25rem;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 1rem;
+  background-color: #f3e7e7;
+  cursor: pointer;
+}
+
+.container-gallery div:hover{
+  transform: scale(1.05);
+  transition: .1s;
+}
+
+.container-gallery h4 {
+  font-size: 1.4rem;
+  padding: 0.5rem;
+}
+
+hr {
+  width: 180px;
+  margin-top: 2rem;
+  opacity: 0.6;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+
