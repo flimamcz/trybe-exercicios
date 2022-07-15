@@ -1,4 +1,4 @@
-// questao 1
+// questao 1 - Crie uma função que receba um número e retorne seu fatorial.
 
 // const fatorial = (number) => {
 //     let fatorial = 1
@@ -9,7 +9,7 @@
 // }
 // console.log(fatorial(20))
 
-// questao 2
+// questao 2 - Crie uma função que receba uma frase e retorne a maior palavra.
 
 // const largerPhrase = (phrase) => {
 //   const phraseSplit = phrase.split(' ');
@@ -25,7 +25,7 @@
 // console.log(largerPhrase('Filipe Lima Azevedo'));
 
 
-// questao 3
+// questao 3 -  Crie uma página com um contador de clique
 
 // const counterElement = document.getElementById('counter')
 // const increment = document.getElementById('increment')
@@ -54,4 +54,24 @@
 // increment.addEventListener('click', incrementCounter)
 // decrement.addEventListener('click', decrementCounter)
 
-// questao 4
+// questao 4 - Crie duas funções JavaScript
+// Função 1: Escreva uma função que substitua a letra 'x' em uma frase.
+// Escreva uma função que irá receber o retorno da Função 1 por parâmetro e retornará uma nova string.
+
+function insertName(name){
+  const phrase = `Tryber ${name} aqui!`
+  return phrase
+}
+
+function returnString(){
+  const skills = ['HTML', 'CSS', 'JS']
+  return `${insertName('Filipe')}
+  
+  Minhas principais habilidades são:
+  ${skills[0]}
+  ${skills[1]}
+  ${skills[2]}
+  `
+}
+
+console.log(returnString())
