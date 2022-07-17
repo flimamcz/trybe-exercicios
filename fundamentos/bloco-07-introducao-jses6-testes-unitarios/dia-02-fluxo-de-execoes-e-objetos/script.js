@@ -1,28 +1,48 @@
-function verifyIsNumber(value1, value2) {
-  if (isNaN(value1) || isNaN(value2) || value1 === 0 || value2 === 0) {
-    throw new Error('Erro! Informe dois números válidos!');
-  }
-}
-
-function sum() {
-  const value1 = document.getElementById('value1').value;
-  const value2 = document.getElementById('value2').value;
-  const resultElement = document.getElementById('result');
-  const result = Number(value1) + Number(value2);
-
-  try {
-    verifyIsNumber(Number(value1), Number(value2));
-    resultElement.innerText = `Resultado: ${result}`;
-    document.getElementById('value1').focus();
-  } catch (error) {
-    resultElement.innerText = error.message;
-  } finally {
-    document.getElementById('value1').value = '';
-    document.getElementById('value2').value = '';
-  }
-}
-
-window.onload = () => {
-  const button = document.getElementById('button');
-  button.addEventListener('click', sum);
+const order = {
+  name: 'Rafael Andrade',
+  phoneNumber: '11-98763-1416',
+  address: {
+    street: 'Rua das Flores',
+    number: '389',
+    apartment: '701',
+  },
+  order: {
+    pizza: {
+      marguerita: {
+        amount: 1,
+        price: 25,
+      },
+      pepperoni: {
+        amount: 1,
+        price: 20,
+      },
+    },
+    drinks: {
+      coke: {
+        type: 'Coca-Cola Zero',
+        price: 10,
+        amount: 1,
+      },
+    },
+    delivery: {
+      deliveryPerson: 'Ana Silveira',
+      price: 5,
+    },
+  },
+  payment: {
+    total: 60,
+  },
 };
+
+const customerInfo = (order) => {
+    return (`Olá ${order.order.delivery.deliveryPerson}, entrega para: ${order.name}, Telefone: ${order.phoneNumber}, ${order.address.street}, N: ${order.address.number}, AP: ${order.address.apartment}`)
+};
+
+// console.log(customerInfo(order));
+
+const orderModifier = (order) => {
+ const orderAltered = Object.assign({}, order)
+ return `Olá ${orderAltered.order.delivery.deliveryPerson = 'Luiz Silva'}, o total do seu pedido de ${Object.keys(orderAltered.order.pizza)} e ${orderAltered.order.drinks.coke.type} é: R$ ${orderAltered.payment.total = '50'} `
+};
+
+console.log(orderModifier(order))
