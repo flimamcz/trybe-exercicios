@@ -61,3 +61,13 @@ function counterStudents(lessons) {
   return `Total de estudantes: ${sumStudents}`
 }
 counterStudents(allLessons)
+
+//Crie uma função que obtenha o valor da chave de acordo com o seu índice no objeto. Por exemplo:
+
+function getValueByNumberObj(obj, number){
+  return obj[number]
+}
+
+getValueByNumberObj(lesson1, 0)
+
+console.log(lesson1[0])
