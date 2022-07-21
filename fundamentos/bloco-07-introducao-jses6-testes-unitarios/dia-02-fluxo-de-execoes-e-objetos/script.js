@@ -128,7 +128,7 @@ function createReport(obj, teacher) {
     }
   }
 
-  console.log(reportObj)
+  return reportObj
 
 }
 
