@@ -1,17 +1,14 @@
-const newHiring = (string) => {
-    return {
-        fullName: string,
-        email: `${string.replace(' ', '_')}@trybe.com`
+function checkWin(number, numberSort) {
+    console.log(number, numberSort)
+    if(number === numberSort) {
+        return 'Parabéns você ganhou!'
     }
+    return 'Tente Novamente!'
 }
 
-const newEmployees = (hiring) => {
-  const employees = {
-    id1: hiring('Pedro Guerra'), // Nome: Pedro Guerra -> Chame sua função passando o nome Pedro Guerra como parâmetro, substituindo as aspas
-    id2: hiring('Luiza Drumond'), // Nome: Luiza Drumond -> Chame sua função passando o nome Luiza Drumond como parâmetro, substituindo as aspas
-    id3: hiring('Carla Paiva'), // Nome: Carla Paiva -> Chame sua função passando o nome Carla Paiva como parâmetro, substituindo as aspas
-  };
-  return employees;
-};
+function generateSort(number, func){
+    const numberAleatory = Math.floor(Math.random() * 5)
+    return func(number, numberAleatory)
+}
 
-console.log(newEmployees(newHiring))
+console.log(generateSort(2, checkWin))
