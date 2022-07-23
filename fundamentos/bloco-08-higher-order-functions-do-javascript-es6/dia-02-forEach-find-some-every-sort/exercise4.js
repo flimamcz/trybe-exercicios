@@ -61,12 +61,8 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-
-function getNamedBook(books) {
-  return books.find((item) => {
-    if(item.name.length === 26) return item
-  })
+function booksOrderedByReleaseYearDesc(books) {
+    return books.sort((a, b) => b.releaseYear - a.releaseYear)
 }
 
-console.log(getNamedBook(books))
+booksOrderedByReleaseYearDesc(books)

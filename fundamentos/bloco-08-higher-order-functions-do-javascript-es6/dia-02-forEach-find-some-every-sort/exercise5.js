@@ -61,12 +61,11 @@ const books = [
   },
 ];
 
-// Adicione o código do exercício aqui:
-
-function getNamedBook(books) {
-  return books.find((item) => {
-    if(item.name.length === 26) return item
-  })
+function everyoneWasBornOnSecXX(book) {
+  // return book.every((item) => item.author.birthYear > 1901)
+  book.forEach(element => {
+    console.log(element.author.birthYear < 1901)
+  });
 }
 
-console.log(getNamedBook(books))
+everyoneWasBornOnSecXX(books)
