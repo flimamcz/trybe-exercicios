@@ -61,8 +61,13 @@ const books = [
   },
 ];
 
-function everyoneWasBornOnSecXX(book) {
-  return book.every((item) => item.author.birthYear > 1901)
+function verifyRelease80s(book) {
+  return book.releaseYear >= 1980 && book.releaseYear <= 1989
 }
 
-everyoneWasBornOnSecXX(books)
+
+function someBookWasReleaseOnThe80s(books, func) {
+  return books.some((book) => func(book)) 
+}
+
+console.log(someBookWasReleaseOnThe80s(books, verifyRelease80s))
