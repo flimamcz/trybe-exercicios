@@ -61,14 +61,13 @@ const books = [
   },
 ];
 
-function fantasyOrScienceFictionAuthors(books) {
+function oldBooks(books) {
+  const yearCurrent = new Date().getFullYear();
+
   return books
-    .filter(
-      (book) => book.genre === 'Ficção Científica' || book.genre === 'Fantasia'
-    )
-    .map((book) => {
-      return book.author.name;
+    .filter((book) => {
+      return yearCurrent - book.releaseYear > 60;
     })
-    .sort();
+    .map((book) => book.name);
 }
-fantasyOrScienceFictionAuthors(books);
+oldBooks(books);
