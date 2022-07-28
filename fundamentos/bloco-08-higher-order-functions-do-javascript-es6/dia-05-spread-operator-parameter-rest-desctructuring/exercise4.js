@@ -32,5 +32,4 @@ const filterPeople = (peoples) => {
     if(bornIn >= 1901 && bornIn <= 2000) return people
   })
 }
-
 console.log(filterPeople(people))
