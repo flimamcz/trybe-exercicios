@@ -23,9 +23,9 @@ function filteredPokemon(name){
 
 function handleError(error, message){
   if (error) {
-    console.log(error.message);
+    return error.message;
   } else {
-  console.log(message);
+    return message;
   }
 }
 
@@ -39,8 +39,8 @@ function getPokemonDetails(namePokemon, filter, callback) {
     const { name, type, ability } = pokemon;
 
     const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
-
-    callback(null, messageFromProfOak);
+    
+    callback(null, messageFromProfOak)
   }, 2000);
 }
 
@@ -48,4 +48,6 @@ getPokemonDetails('Charmander', filteredPokemon, handleError)
 
 module.exports = {
   getPokemonDetails,
+  filteredPokemon,
+  handleError,
 };
